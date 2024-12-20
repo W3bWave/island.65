@@ -1,25 +1,54 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+import { createRouter, createWebHistory } from 'vue-router';
+import Main from '../views/MainView.vue';
+import MainIcon from '../assets/icons/nav/MainIcon.vue';
+import ServicesIcon from '../assets/icons/nav/ServicesIcon.vue';
+import ProfileIcon from '../assets/icons/nav/ProfileIcon.vue';
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes: [
+    {
+      path: '/',
+      name: 'Главная',
+      icon: MainIcon,
+      component: Main,
+    },
+    {
+      path: '/services',
+      name: 'Сервисы',
+      icon: ServicesIcon,
+      component: () => import('../views/ServicesView.vue'),
+      children: [
+        {
+          path: '/services/gorni',
+          name: 'Горный Воздух',
+          component: () => import('../views/services/gorni/MainView.vue'),
+        }
+      ]
+    },
+    {
+      path: '/profile',
+      name: 'Профиль',
+      icon: ProfileIcon,
+      component: () => import('../views/ProfileView.vue'),
+    },
+    {
+      path: '/404',
+      name: 'Not Found - 404',
+      component: () => import('../views/ErrorView.vue'),
+      meta: { notFound: true },
+    },
+    {
+      path: '/:catchAll(.*)',
+      redirect: '/404',
+    },
+  ],
+});
 
-export default router
+// Example of using a navigation guard to update the document title
+router.beforeEach((to, from, next) => {
+  document.title = 'Острова.65 - ' + to.name;
+  next();
+});
+
+export default router;
