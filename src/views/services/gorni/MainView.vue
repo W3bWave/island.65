@@ -8,7 +8,7 @@ export default {
     },
     data(){
         return { 
-            showSosBtn : true
+            showSosBtn : false
         }
     },
     mounted(){
