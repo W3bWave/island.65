@@ -1,12 +1,12 @@
 <script>
-import CardContainerComp from '@/components/main/CardContainerComp.vue';
+// import CardContainerComp from '@/components/main/CardContainerComp.vue';
 import ContainerComp from '@/components/main/ContainerComp.vue';
 
 export default {
   name: 'HomeView',
   components: {
     ContainerComp,
-    CardContainerComp
+    // CardContainerComp
   },
   data() {
     return {
@@ -51,6 +51,7 @@ export default {
 </script>
 
 <template>
-  <CardContainerComp :cards="cards" />
+  <!-- <CardContainerComp :cards="cards" /> -->
   <ContainerComp :slides="slides" />
+  <span>to be continued</span>
 </template>

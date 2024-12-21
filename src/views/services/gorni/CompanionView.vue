@@ -70,14 +70,15 @@
         this.wanter = false;
       },
       async acceptOffer(){
-        this.wanter = false;
+        
         this.Telegram.WebApp.openTelegramLink(`https://t.me/${this.wanter.username}`);
         let oreq = await axios.post("https://welcome.netcloud.dev/api/v1/gv/companion/stop",{
           user : this.user.user
         });
-  
+        
         if(oreq.data.ok){
           this.finding = false;
+          this.wanter = false;
         }
       },
       async findCompanion(){
@@ -149,7 +150,7 @@
   </script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style>
+  <style scoped>
     button{
       background-color: #3ac3ea;
       color: #000;

@@ -8,6 +8,9 @@ import store from './store'
 
 let app = createApp(App)
 app.config.globalProperties.Telegram = window.Telegram;
+setTimeout(() => {
+    if(window.Telegram.WebApp.platform != 'tdesktop' && window.Telegram.WebApp.platform != 'web') window.Telegram.WebApp.requestFullscreen()    
+}, 500);
 
 
 app.use(store).use(router).mount('#app')

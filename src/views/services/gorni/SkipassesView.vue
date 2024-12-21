@@ -74,7 +74,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .container-1 {
     width: 100%;
     background-color: #fff;

@@ -5,5 +5,5 @@ export default{
 </script>
 
 <template>
-    профиль
+    <span>to be continued</span>
 </template>

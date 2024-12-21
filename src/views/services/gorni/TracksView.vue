@@ -85,7 +85,7 @@ export default{
     </div>
     
 </template>
-<style>
+<style scoped>
    
     .tracks{
         display: flex;
