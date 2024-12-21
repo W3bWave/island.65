@@ -30,6 +30,8 @@ class PfdoAPI {
         // - is_open - открыто
         // - контакты:
         //  - address.name
+        //  - address.lat
+        //  - address.lng
         //  - organization.name
         //  - age_max / 12
         //  - age_min / 12
@@ -56,6 +58,12 @@ class PfdoAPI {
             if (params.directionIds) {
                 params.directionIds.forEach(id => queryParams.append('search[direction_id][]', id));
             }
+            // 2 - техническая
+            // 3 - художественная
+            // 4 - естественнонаучная
+            // 5 - социально-гуманитарная
+            // 6 - туристко-краеведческая
+            // 7 - физкультурно-спортивная
 
             if (params.ages) {
                 params.ages.forEach(age => queryParams.append('search[ages][]', age));
@@ -64,6 +72,20 @@ class PfdoAPI {
             if (params.name) {
                 queryParams.append('search[name]', params.name);
             }
+
+            if (params.form) {
+                queryParams.append('search[form]', params.form);
+            }
+            // 1 - Очная
+            // 2 - Очно-заочная
+            // 3 - Заочная
+
+            if (params.avarage) {
+                queryParams.append('search[average_score_min]', params.avarage);
+                queryParams.append('search[average_score_max]', 5);
+            }
+
+            
 
             const url = `https://api.pfdo.ru/v2/main-page/search/es-programs?${queryParams.toString()}&sort=&per-page=24&operator=31&expand=program_nok_rating,duration_string,kind`;
             const response = await axios.get(url);
