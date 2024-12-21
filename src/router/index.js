@@ -33,7 +33,18 @@ const router = createRouter({
           path: '/services/gorni/weather',
           name: 'Погода на трассе',
           component: () => import('../views/services/gorni/WeatherView.vue'),
-        }
+        },
+        
+        {
+          path: '/services/gorni/time',
+          name: 'Горный Воздух - Режим работы',
+          component: () => import('../views/services/gorni/TimeView.vue'),
+        },
+        {
+          path: '/services/gorni/contact',
+          name: 'Горный Воздух - Режим работы',
+          component: () => import('../views/services/gorni/ContactView.vue'),
+        },
       ]
     },
     {
