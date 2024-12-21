@@ -1,10 +1,19 @@
 <script>
+import axios from 'axios'
 export default {
     name: "GorniMainView",
     methods : {
-        sendSOS(){
+        async sendSOS(){
             this.Telegram.WebApp.LocationManager.getLocation((data)=>{
-                alert(data);
+                if(data != null){
+                    let sent = axios.post("https://welcome.netcloud.dev/api/v1/gv/sos",{
+                        longitude : data.longitude,
+                        latitude : data.latitude
+                    })
+                    if (sent.data.status == "ok"){
+                        alert("SOS ОТПРАВЛЕН")
+                    }
+                }
             })
         }
     },
