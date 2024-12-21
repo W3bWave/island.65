@@ -4,9 +4,9 @@ export default {
     name: "GorniMainView",
     methods : {
         async sendSOS(){
-            this.Telegram.WebApp.LocationManager.getLocation((data)=>{
+            this.Telegram.WebApp.LocationManager.getLocation(async (data)=>{
                 if(data != null){
-                    let sent = axios.post("https://welcome.netcloud.dev/api/v1/gv/sos",{
+                    let sent = await axios.post("https://welcome.netcloud.dev/api/v1/gv/sos",{
                         longitude : data.longitude,
                         latitude : data.latitude
                     })
