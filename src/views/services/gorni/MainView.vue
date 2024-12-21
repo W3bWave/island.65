@@ -50,22 +50,22 @@ export default {
             </div>
             <div class="container">
                 <div class="cards">
-                    <router-link class="card" to="/services/gorni/tracks">
+                    <router-link class="card" to="/services/gorni/weather">
                         <img src="../../../assets/banners/gorni_main/Карточка_сервиса.png">
                     </router-link>
                     <router-link class="card" to="/services/gorni/tracks">
                         <img src="../../../assets/banners/gorni_main/Карточка_сервиса-1.png">
                     </router-link>
-                    <router-link class="card" to="/services/gorni/tracks">
+                    <router-link class="card" to="/services/gorni/skipasses">
                         <img src="../../../assets/banners/gorni_main/Карточка_сервиса-2.png">
                     </router-link>
-                    <router-link class="card" to="/services/gorni/tracks">
+                    <router-link class="card" to="/services/gorni/time">
                         <img src="../../../assets/banners/gorni_main/Карточка_услуги.png">
                     </router-link>
-                    <router-link class="card" to="/services/gorni/time">
+                    <router-link class="card" to="/services/gorni/contacts">
                         <img src="../../../assets/banners/gorni_main/Карточка_услуги-1.png">
                     </router-link>
-                    <router-link class="card" to="/services/gorni/contacts">
+                    <router-link class="card" to="/services/gorni/find">
                         <img src="../../../assets/banners/gorni_main/Карточка_услуги-2.png">
                     </router-link>
                 </div>
@@ -86,6 +86,7 @@ export default {
     background-color: #fff;
     padding: 1.5rem 1rem;
     display: flex;
+    gap: 1.2rem;
     flex-direction: column;
     align-items: start;
   }
@@ -93,6 +94,7 @@ export default {
   section {
     width: 100%;
     display: flex;
+    gap: 1.1rem;
     flex-direction: column;
     justify-content: center;
 
@@ -116,6 +118,7 @@ export default {
         .ski {
             width: 100%;
             padding: 1.5rem;
+            font-size: 1.3rem;
             background: linear-gradient(102.68deg, #001ABB 12.24%, #4E67FF 97.02%);
             box-shadow: 0px 4px 8px rgba(12, 41, 117, 0.12);
             border-radius: .75rem;

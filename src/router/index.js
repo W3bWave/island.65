@@ -41,7 +41,7 @@ const router = createRouter({
           component: () => import('../views/services/gorni/TimeView.vue'),
         },
         {
-          path: '/services/gorni/contact',
+          path: '/services/gorni/contacts',
           name: 'Горный Воздух - Режим работы',
           component: () => import('../views/services/gorni/ContactView.vue'),
         },
