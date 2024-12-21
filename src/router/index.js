@@ -45,6 +45,11 @@ const router = createRouter({
           name: 'Горный Воздух - Режим работы',
           component: () => import('../views/services/gorni/ContactView.vue'),
         },
+        {
+          path: '/services/gorni/skipasses',
+          name: 'Горный Воздух - Тарифы на ски-пассы',
+          component: () => import('../views/services/gorni/SkipassesView.vue'),
+        },
       ]
     },
     {
