@@ -49,7 +49,6 @@ export default {
                 <h2 style="display: none" class="name-sect-title">Сервисы</h2>
             </div>
             <div class="container">
-                <div class="cards">
                     <div class="block-cards">
                     <router-link class="card" to="/services/gorni/weather">
                         <div class="card-icon"><img src="@/assets/icons/services/tourism_white.svg" alt=""></div>
@@ -57,7 +56,7 @@ export default {
                     </router-link>
                     <router-link class="card" to="/services/gorni/tracks">
                         <div class="card-icon"><img src="@/assets/icons/services/tourism_white.svg" alt=""></div>
-                        <span class="card-name">Состояние трас</span>
+                        <span class="card-name">Состояние трасс</span>
                     </router-link>
                     <router-link class="card" to="/services/gorni/skipasses">
                         <div class="card-icon"><img src="@/assets/icons/gorny/card.svg" alt=""></div>
@@ -75,7 +74,6 @@ export default {
                         <div class="card-icon"><img src="@/assets/icons/gorny/comment.svg" alt=""></div>
                         <span class="card-name">Поиск попутчика</span>
                     </router-link>
-                    </div>
                 </div>
             </div>
         </section>
@@ -200,6 +198,7 @@ export default {
     width: 100%;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 .card{
