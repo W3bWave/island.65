@@ -3,7 +3,9 @@ export default {
     name: "GorniMainView",
     methods : {
         sendSOS(){
-            
+            this.Telegram.WebApp.LocationManager.getLocation((data)=>{
+                alert(data);
+            })
         }
     },
     data(){
