@@ -12,7 +12,7 @@
         min-width: 100%;
         background-color: #fff;
         display: flex;
-        align-items: center;
+        
         justify-content: center;
         padding: 2rem 0;
         box-shadow: 0px 4px 8px rgba(12, 41, 117, 0.12);
@@ -23,6 +23,7 @@
             background-color: #0D8200;
             color: #fff;
             padding: .5rem;
+            margin-top: 1.4rem;
             border-radius: 1.5rem;
             font-size: .75rem;
         }
