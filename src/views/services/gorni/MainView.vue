@@ -50,24 +50,32 @@ export default {
             </div>
             <div class="container">
                 <div class="cards">
+                    <div class="block-cards">
                     <router-link class="card" to="/services/gorni/weather">
-                        <img src="../../../assets/banners/gorni_main/Карточка_сервиса.png">
+                        <div class="card-icon"><img src="@/assets/icons/services/tourism_white.svg" alt=""></div>
+                        <span class="card-name">Погода</span>
                     </router-link>
                     <router-link class="card" to="/services/gorni/tracks">
-                        <img src="../../../assets/banners/gorni_main/Карточка_сервиса-1.png">
+                        <div class="card-icon"><img src="@/assets/icons/services/tourism_white.svg" alt=""></div>
+                        <span class="card-name">Состояние трас</span>
                     </router-link>
                     <router-link class="card" to="/services/gorni/skipasses">
-                        <img src="../../../assets/banners/gorni_main/Карточка_сервиса-2.png">
+                        <div class="card-icon"><img src="@/assets/icons/gorny/card.svg" alt=""></div>
+                        <span class="card-name">Ски-пасс</span>
                     </router-link>
                     <router-link class="card" to="/services/gorni/time">
-                        <img src="../../../assets/banners/gorni_main/Карточка_услуги.png">
+                        <div class="card-icon"><img src="@/assets/icons/gorny/calendar.svg" alt=""></div>
+                        <span class="card-name">Режим работы</span>
                     </router-link>
                     <router-link class="card" to="/services/gorni/contacts">
-                        <img src="../../../assets/banners/gorni_main/Карточка_услуги-1.png">
+                        <div class="card-icon"><img src="@/assets/icons/gorny/phone.svg" alt=""></div>
+                        <span class="card-name">Контакты</span>
                     </router-link>
                     <router-link class="card" to="/services/gorni/companions">
-                        <img src="../../../assets/banners/gorni_main/Карточка_услуги-2.png">
+                        <div class="card-icon"><img src="@/assets/icons/gorny/comment.svg" alt=""></div>
+                        <span class="card-name">Поиск попутчика</span>
                     </router-link>
+                    </div>
                 </div>
             </div>
         </section>
@@ -185,5 +193,38 @@ export default {
         }
     }
   }
+
+
+.block-cards{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card{
+  background: linear-gradient(102.68deg, #001ABB 12.24%, #4E67FF 97.02%);
+  border-radius: 12px;
+  opacity: 0.8;
+  width: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  padding-left: 10px;
+  height: 72px;
+}
+.card-icon img{
+  height: 24px;
+  width: 24px;
+}
+.new{
+  background: linear-gradient(102.68deg, #bb5400 12.24%, #ffa44e 97.02%);
+}
+.card-name{
+  font-size: 12px;
+  color: #fff;
+  line-height: 12px;
+}
 </style>
 
