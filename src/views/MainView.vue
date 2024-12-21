@@ -1,12 +1,12 @@
 <script>
-// import CardContainerComp from '@/components/main/CardContainerComp.vue';
+import CardContainerComp from '@/components/main/CardContainerComp.vue';
 import ContainerComp from '@/components/main/ContainerComp.vue';
 
 export default {
   name: 'HomeView',
   components: {
     ContainerComp,
-    // CardContainerComp
+    CardContainerComp
   },
   data() {
     return {
@@ -21,29 +21,30 @@ export default {
       ],
       cards: [
         {
-          img: require('@/assets/icons/cards/safe_city.png'),
+          img: require('@/assets/icons/main/medicine.svg'),
+          title : "медицинские услуги",
           link: '/services/404'
         },
         {
-          img: require('@/assets/icons/cards/safe_city.png'),
+          img: require('@/assets/icons/main/card.svg'),
+          title : "карта сахалинца",
           link: '/services/404'
         },
         {
-          img: require('@/assets/icons/cards/safe_city.png'),
+          img: require('@/assets/icons/main/notes.svg'),
+          title : "опросы",
           link: '/services/404'
         },
         {
-          img: require('@/assets/icons/cards/safe_city.png'),
+          img: require('@/assets/icons/main/news.svg'),
+          title : "новости",
           link: '/services/404'
         },
         {
-          img: require('@/assets/icons/cards/safe_city.png'),
+          img: require('@/assets/icons/main/nakaz.svg'),
+          title : "наказы",
           link: '/services/404'
-        },
-        {
-          img: require('@/assets/icons/cards/safe_city.png'),
-          link: '/services/404'
-        },
+        }
       ]
     };
   }
@@ -51,7 +52,15 @@ export default {
 </script>
 
 <template>
-  <!-- <CardContainerComp :cards="cards" /> -->
-  <ContainerComp :slides="slides" />
-  <span>to be continued</span>
+  
+    <CardContainerComp :cards="cards" />
+    <ContainerComp :slides="slides" />
+    
 </template>
+<style scoped>
+  .home{
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+  }
+</style>

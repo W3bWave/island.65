@@ -1,6 +1,24 @@
 <script>
 export default {
     name: "GorniMainView",
+    methods : {
+        sendSOS(){
+            
+        }
+    },
+    data(){
+        return { 
+            showSosBtn : true
+        }
+    },
+    mounted(){
+        
+        this.Telegram.WebApp.LocationManager.init(()=>{
+                if(this.Telegram.WebApp.LocationManager.isLocationAvailable){
+                        this.showSosBtn = true;
+                }
+        })
+    }
 };
 
 </script>
@@ -82,6 +100,10 @@ export default {
         <section id="banner">
             <img src="../../../assets/banners/not_working.png" alt="Работа Горного Воздуха">
         </section>
+        <div class="sos-btn" v-if="showSosBtn">
+            <span>Случилось ЧП на трассе? Жмите экстренную кнопку, ваши координаты будут отправлены специалистам</span>
+            <button class="sos-button" @click="sendSOS()">SOS</button>
+        </div>
     </div>
 </template>
 
@@ -224,6 +246,21 @@ export default {
   font-size: 12px;
   color: #fff;
   line-height: 12px;
+}
+.sos-btn{
+    color: #fff;
+    background: linear-gradient(102.68deg, #CA0000 12.24%, #FF3B30 97.02%);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.sos-button{
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    color: #CA0000;
 }
 </style>
 
