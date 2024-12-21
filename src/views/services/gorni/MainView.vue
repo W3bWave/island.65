@@ -65,7 +65,7 @@ export default {
                     <router-link class="card" to="/services/gorni/contacts">
                         <img src="../../../assets/banners/gorni_main/Карточка_услуги-1.png">
                     </router-link>
-                    <router-link class="card" to="/services/gorni/find">
+                    <router-link class="card" to="/services/gorni/companions">
                         <img src="../../../assets/banners/gorni_main/Карточка_услуги-2.png">
                     </router-link>
                 </div>

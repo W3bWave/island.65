@@ -58,7 +58,7 @@
         this.Telegram.WebApp.MainButton.show();
       },
       async stop(){
-        let oreq = await axios.post("http://localhost/api/v1/gv/companion/stop",{
+        let oreq = await axios.post("https://welcome.netcloud.dev/api/v1/gv/companion/stop",{
           user : this.user.user
         });
   
@@ -72,7 +72,7 @@
       async acceptOffer(){
         this.wanter = false;
         this.Telegram.WebApp.openTelegramLink(`https://t.me/${this.wanter.username}`);
-        let oreq = await axios.post("http://localhost/api/v1/gv/companion/stop",{
+        let oreq = await axios.post("https://welcome.netcloud.dev/api/v1/gv/companion/stop",{
           user : this.user.user
         });
   
@@ -81,7 +81,7 @@
         }
       },
       async findCompanion(){
-        let oreq = await axios.post("http://localhost/api/v1/gv/companion/start",{
+        let oreq = await axios.post("https://welcome.netcloud.dev/api/v1/gv/companion/start",{
           user : this.user.user
         });
         if(oreq.data.ok){
@@ -90,7 +90,7 @@
         
       },
       async offer(companion){
-        await axios.post("http://localhost/api/v1/gv/companion/offer",{
+        await axios.post("https://welcome.netcloud.dev/api/v1/gv/companion/offer",{
           to : companion,
           from : this.user
         });
@@ -102,7 +102,7 @@
     },
     async mounted(){
         this.user = this.Telegram.WebApp.initDataUnsafe;
-        let socket = new WebSocket("ws://localhost:3000");
+        let socket = new WebSocket("wss://welcome.netcloud.dev/websocket");
         socket.onopen= ()=>{
           socket.send(JSON.stringify({
             "action" : "REGISTER_SESSION",
@@ -133,7 +133,7 @@
           }
           
         }
-        let json =  await (await fetch("http://localhost/api/v1/gv/companion/get")).json();
+        let json =  await (await fetch("https://welcome.netcloud.dev/api/v1/gv/companion/get")).json();
         this.companions = json;
   
         for(let companion of json){
@@ -155,7 +155,7 @@
       color: #000;
       border-radius: 5px;
       border: none;
-      padding: 10px;
+      padding: 10px; 
       font-family: Arial;
     }
     .buttons{

@@ -8,4 +8,9 @@ import store from './store'
 
 let app = createApp(App)
 app.config.globalProperties.Telegram = window.Telegram;
+
+if(window.Telegram.WebApp.platform == "ios" || window.Telegram.WebApp.platform == "android"){
+    window.Telegram.WebApp.requestFullScreen()
+}
+
 app.use(store).use(router).mount('#app')
