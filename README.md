@@ -38,7 +38,7 @@
 Цель: Создать модуль для отображения культурных мероприятий Сахалина.
 
 #### Выполнено:
-- Разработан дизайн-макет в Figma, включающий:
+- Разработан дизайн-макет в [Figma](https://www.figma.com/design/dHK18ACdfbucnQKw4JOBGB/Untitled?node-id=16-945), включающий:
   - Отображение информации о мероприятиях.
   - Календарь мероприятий.
   - Фильтрацию и поиск по ключевым параметрам.
@@ -55,6 +55,7 @@
 - Frontend: VueJS.
 - Backend: Express ([Репозиторий](https://github.com/W3bWave/island65-back-end)).
 - Публикация: Telegram Mini Apps ([Решение для задачи 1 || СЕРВИСЫ -> ГОРНЫЙ ВОЗДУХ](https://t.me/island65_bot/Islands65)).
+- Макет: Figma ([Макет](https://www.figma.com/design/dHK18ACdfbucnQKw4JOBGB/Untitled?node-id=16-945)).
 
 ## План развития
 1. Завершение разработки модуля "Афиша".
