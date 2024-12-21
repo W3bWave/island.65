@@ -54,6 +54,21 @@ const router = createRouter({
           path: '/services/gorni/companions',
           name: 'Горный Воздух - Поиск попутчика',
           component: () => import('../views/services/gorni/CompanionView.vue'),
+        },
+        {
+          path: '/services/pfdo',
+          name: 'Секции и кружки',
+          component: () => import('../views/services/pfdo/MainView.vue'),
+        },
+        {
+          path: '/services/pfdo/card/:id',
+          name: 'Секции и кружки - Данные',
+          component: () => import('../views/services/pfdo/CardView.vue'),
+        },
+        {
+          path: '/services/pfdo/card/:id/reviews',
+          name: 'Горный Воздух - Поиск попутчика',
+          component: () => import('../views/services/pfdo/ReviewsView.vue'),
         }
       ]
     },

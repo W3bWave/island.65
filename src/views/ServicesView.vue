@@ -1,34 +1,38 @@
 <template>
   <div class="flex flex-col" v-if="$route.path == '/services'">
-    <img src="@/assets/icons/cards/finances.svg" alt="">
+    <img class="bright" src="@/assets/icons/cards/finances.svg" alt="">
     <div class="new-service-block">
       <div class="block-header">
         <img height="24" width="24" src="@/assets/icons/services/tourism.svg" alt="">
         <span>Туризм, досуг, отдых</span>
       </div>
       <div class="block-cards">
-        <div class="card">
+        <div class="card bright" style="filter: brightness(0.3)">
           <div class="card-icon"><img src="@/assets/icons/services/tourism_white.svg" alt=""></div>
           <span class="card-name">GoSakhalin</span>
         </div>
         <div class="card new" @click="$router.push('/services/gorni')">
           <div class="card-icon"><img src="@/assets/icons/services/mountain_air.svg" alt=""></div>
-          <span class="card-name">горный воздух</span>
+          <span class="card-name">Горный воздух</span>
         </div>
-        <div class="card">
+        <div class="card new" @click="$router.push('/services/pfdo')">
           <div class="card-icon"><img src="@/assets/icons/services/cult_island.svg" alt=""></div>
-          <span class="card-name">острова культуры</span>
+          <span class="card-name">Секции и кружки</span>
         </div>
       </div>
     </div>
-    <img src="@/assets/icons/cards/help.svg" alt="">
-    <img src="@/assets/icons/cards/medicine.svg" alt="">
-    <img src="@/assets/icons/cards/info.svg" alt="">
-    <img src="@/assets/icons/cards/all.svg" alt="">
+    <img class="bright" src="@/assets/icons/cards/help.svg" alt="">
+    <img class="bright" src="@/assets/icons/cards/medicine.svg" alt="">
+    <img class="bright" src="@/assets/icons/cards/info.svg" alt="">
+    <img class="bright" src="@/assets/icons/cards/all.svg" alt="">
   </div>
   <router-view v-else></router-view>
 </template>
 <style scoped>
+.bright{
+  filter: brightness(0.75)
+}
+
 .new-service-block{
   background-color: #fff;
   box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
