@@ -82,4 +82,49 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
+
+let blackLisFromRoutesForNavigation = [
+  "/",
+  "/cart",
+  "/favorites",
+  "/products/edit/:id",
+  "/products/create/second",
+  "/shops/edit/:id",
+  "/shops/create/second",
+  "/shops/create/first"
+]
+let blackLisToRoutesForNavigation = [
+  "/",
+  "/profile",
+  "/services",
+]
+
+window.Telegram.WebApp.BackButton.onClick(()=>{
+  router.go(-1)
+  })
+router.beforeEach((to, from, next) => {
+  console.log(to);
+  
+  
+    let match = false;
+    if(from.matched.length > 0){
+      console.log(from.matched);
+      
+      if(blackLisFromRoutesForNavigation.includes(from.matched[0].path)){
+        match = true;
+      }
+    }
+    if(blackLisFromRoutesForNavigation.includes(from.path) || blackLisToRoutesForNavigation.includes(to.path) || match){
+      window.Telegram.WebApp.BackButton.hide()
+      console.log("hide");
+      
+    }
+    else{
+      window.Telegram.WebApp.BackButton.show()
+      console.log("show");
+    }
+    
+    next();
+  })
+
 export default router;
