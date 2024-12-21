@@ -14,7 +14,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 1.8rem 0;
+        padding: 2rem 0;
         box-shadow: 0px 4px 8px rgba(12, 41, 117, 0.12);
         z-index: 100;
 
