@@ -66,7 +66,7 @@ class PfdoAPI {
             // 7 - физкультурно-спортивная
 
             if (params.ages) {
-                params.ages.forEach(age => queryParams.append('search[ages][]', age));
+                params.ages.forEach((age, key) => queryParams.append(`search[ages][${key}]`, age));
             }
 
             if (params.name) {
