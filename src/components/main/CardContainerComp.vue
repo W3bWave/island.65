@@ -3,7 +3,7 @@
       <div class="sect-name">
         <h2 class="visually-hidden">Карточки</h2>
       </div>
-      <div class="container">
+      <div class="my-container">
         <!-- Перебираем массив карточек и создаем элементы -->
         <router-link
           v-for="(card, index) in cards"
@@ -52,7 +52,7 @@
     display: none;
   }
   
-  .container {
+  .my-container {
     width: 95%;
     height:fit-content;
     display: flex;

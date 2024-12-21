@@ -23,6 +23,16 @@ const router = createRouter({
           path: '/services/gorni',
           name: 'Горный Воздух',
           component: () => import('../views/services/gorni/MainView.vue'),
+        },
+        {
+          path: '/services/gorni/tracks',
+          name: 'Состояние трасс',
+          component: () => import('../views/services/gorni/TracksView.vue'),
+        },
+        {
+          path: '/services/gorni/weather',
+          name: 'Погода на трассе',
+          component: () => import('../views/services/gorni/WeatherView.vue'),
         }
       ]
     },

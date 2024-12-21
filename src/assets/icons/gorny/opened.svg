@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 8</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-8" transform="translate(1.000000, 1.000000)" stroke="#429867" stroke-width="2">
+            <g id="Group-7" fill-rule="nonzero">
+                <path d="M15,0 C6.72873985,0 0,6.72873985 0,14.9994015 C0.000598455984,23.2709609 6.72993676,30 15.0011969,30 C23.2715594,30 30,23.2706617 30,14.9994015 C30,6.72873985 23.2712601,0 15,0 Z" id="Path"/>
+            </g>
+            <polyline id="Path-2" stroke-linecap="round" points="9.08433242 14.790838 12.8039671 19.351815 21.0843324 11.0709569"/>
+        </g>
+    </g>
+</svg>

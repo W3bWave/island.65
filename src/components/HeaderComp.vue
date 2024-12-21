@@ -1,6 +1,6 @@
 <template>
     <header id="header">
-        <span id="title-app" class="roboto-bold">Острова.65</span>
+        <span id="title-app" class="roboto-bold">Острова.65 {{ $route.name }}</span>
     </header>
 </template>
 
