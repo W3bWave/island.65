@@ -26,12 +26,12 @@ const router = createRouter({
         },
         {
           path: '/services/gorni/tracks',
-          name: 'Состояние трасс',
+          name: 'Горный Воздух - Состояние трасс',
           component: () => import('../views/services/gorni/TracksView.vue'),
         },
         {
           path: '/services/gorni/weather',
-          name: 'Погода на трассе',
+          name: 'Горный Воздух - Погода на трассе',
           component: () => import('../views/services/gorni/WeatherView.vue'),
         },
         

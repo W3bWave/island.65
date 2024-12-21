@@ -102,6 +102,7 @@
                     humidity = this.serverData.forecasts[0].parts[time].humidity;
                     pressure_mm = this.serverData.forecasts[0].parts[time].pressure_mm;
                 }
+                this.current_time = time
                 this.renderData.temp = temp;
                 this.renderData.condition = main.condition;
                 this.renderData.icon = icon;

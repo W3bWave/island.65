@@ -85,7 +85,6 @@ export default {
     width: 100%;
     background-color: #fff;
     padding: 1.5rem 1rem;
-    gap: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -96,7 +95,6 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
 
     &:last-child{
         margin-bottom: 0.5em
@@ -104,6 +102,8 @@ export default {
 
     .name-sect {
         padding-left: .75rem;
+        font-size: 1.5rem;
+        font-weight: 600;
     }
   }
 
