@@ -1,12 +1,14 @@
 <script>
 import CardContainerComp from '@/components/main/CardContainerComp.vue';
 import ContainerComp from '@/components/main/ContainerComp.vue';
+import PinCode from '@/components/main/PinCode.vue';
 
 export default {
   name: 'HomeView',
   components: {
     ContainerComp,
-    CardContainerComp
+    CardContainerComp,
+    PinCode
   },
   data() {
     return {
@@ -55,7 +57,7 @@ export default {
   
     <CardContainerComp :cards="cards" />
     <ContainerComp :slides="slides" />
-    
+    <PinCode/>
 </template>
 <style scoped>
   .home{
