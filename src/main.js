@@ -8,6 +8,7 @@ import store from './store'
 
 let app = createApp(App)
 app.config.globalProperties.Telegram = window.Telegram;
+app.config.globalProperties.ymaps = window.ymaps;
 setTimeout(() => {
     if(window.Telegram.WebApp.platform != 'tdesktop' && window.Telegram.WebApp.platform != 'web') window.Telegram.WebApp.requestFullscreen()
         window.Telegram.WebApp.lockOrientation();

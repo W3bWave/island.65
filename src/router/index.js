@@ -67,7 +67,7 @@ const router = createRouter({
         },
         {
           path: '/services/pfdo/card/:id/reviews',
-          name: 'Горный Воздух - Поиск попутчика',
+          name: 'Секции и кружки - Отзывы',
           component: () => import('../views/services/pfdo/ReviewsView.vue'),
         }
       ]
@@ -100,13 +100,6 @@ router.beforeEach((to, from, next) => {
 
 let blackLisFromRoutesForNavigation = [
   "/",
-  "/cart",
-  "/favorites",
-  "/products/edit/:id",
-  "/products/create/second",
-  "/shops/edit/:id",
-  "/shops/create/second",
-  "/shops/create/first"
 ]
 let blackLisToRoutesForNavigation = [
   "/",
@@ -118,9 +111,6 @@ window.Telegram.WebApp.BackButton.onClick(()=>{
   router.go(-1)
   })
 router.beforeEach((to, from, next) => {
-  console.log(to);
-  
-  
     let match = false;
     if(from.matched.length > 0){
       console.log(from.matched);
