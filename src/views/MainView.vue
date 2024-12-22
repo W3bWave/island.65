@@ -57,7 +57,7 @@ export default {
   
     <CardContainerComp :cards="cards" />
     <ContainerComp :slides="slides" />
-    <PinCode/>
+    <PinCode v-if="!$store.state.pinAuthorized"/>
 </template>
 <style scoped>
   .home{

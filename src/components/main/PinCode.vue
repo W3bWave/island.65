@@ -2,7 +2,7 @@
     <div class="pincode">
         <div class="keyboard">
             <span>Придумайте код доступа</span>
-            <div class="points">
+            <div :class="(errorPin) ? 'error point' : 'point'">
                 <div class="point" v-for="value of values" :key="value">
                     <span :class="(value == null) ? 'bull' : ''">{{ value }}</span>
                 </div>
@@ -31,6 +31,7 @@
             return {
                 values : [null,null,null,null],
                 keys : [1,2,3,4,5,6,7,8,9],
+                errorPin: false,
                 cursor : 0
             }
         },
@@ -43,14 +44,17 @@
                         this.Telegram.WebApp.CloudStorage.getItem("pin",(data,val)=>{
                             if(!val){
                                 this.Telegram.WebApp.CloudStorage.setItem("pin",this.values.join(''))    
-                                alert('joined')
+                                this.$store.state.pinAuthorized = true;
                             }
                             else{
                                 if(val == this.values.join('')){
-                                    alert('joined')
+                                    this.$store.state.pinAuthorized = true;
                                 }
                                 else{
-                                    alert('pin error')
+                                    this.errorPin = true;
+                                    setTimeout(() => {
+                                        this.errorPin = false;
+                                    }, 500);
                                 }
                             }
                         })
@@ -94,6 +98,9 @@
         border-radius: 10px;
         color: #185AC5;
         transition: .3s linear 0s;
+    }
+    .error .point{
+        color: red !important;
     }
     .pin__btn:active{
         background-color: #a2bdeaa3;
