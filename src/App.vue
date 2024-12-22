@@ -10,7 +10,7 @@ export default {
   },
   mounted(){
     if(this.Telegram.WebApp.platform != 'tdesktop' && this.Telegram.WebApp.platform != 'web'){
-      this.$store.state.pinAuthorized = true,
+      this.$store.state.pinAuthorized = true
     }
   }
 }
