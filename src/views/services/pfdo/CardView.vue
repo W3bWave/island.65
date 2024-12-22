@@ -75,7 +75,7 @@
     <div class="container">
         <div class="program">
             <div class="cont_params">
-                <div class="card" :style="'background:'+getRandomGradient()">
+                <div class="card" v-if="card" :style="'background:'+getRandomGradient()">
                     <h2 class="name">{{ card.name }}</h2>
                     <h3 class="org">{{ card.org }}</h3>
                 </div>
@@ -123,7 +123,7 @@
                 </div>
                 <div v-html="card.descript" class="descript"></div>
             </div>
-            <!-- <h2>Адрес: {{ card.address.address }}</h2> -->
+            <h2 v-if="card.address">Адрес: {{ card.address.address }}</h2>
             <div class="map" id="map"></div>
         </div>
     </div>

@@ -186,6 +186,7 @@
     padding: 10px;
     font-size: 14px;
   }
+
   .filters {
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -238,7 +239,7 @@
     gap: 1.5rem;
 
     .card{
-        width: 45%;
+        width: 100%;
         min-height: 350px;
         padding: 1rem;
         border-radius: 1rem;
