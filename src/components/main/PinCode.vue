@@ -40,13 +40,13 @@
                     this.cursor = this.values.indexOf(null)
                     this.values[this.values.indexOf(null)] = key;
                     if(this.cursor == 3){
-                        this.Telegram.WebApp.CloudStorage.getItem("pin",(data)=>{
-                            if(!data){
-                                this.Telegram.WebApp.CloudStorage.setItem("pin",this.keys.join(''))    
+                        this.Telegram.WebApp.CloudStorage.getItem("pin",(data,val)=>{
+                            if(!val){
+                                this.Telegram.WebApp.CloudStorage.setItem("pin",this.values.join(''))    
                                 alert('joined')
                             }
                             else{
-                                if(data == this.keys.join('')){
+                                if(val == this.values.join('')){
                                     alert('joined')
                                 }
                                 else{
