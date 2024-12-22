@@ -2,7 +2,7 @@
     <div class="pincode">
         <div class="keyboard">
             <span>Придумайте код доступа</span>
-            <div :class="(errorPin) ? 'error point' : 'point'">
+            <div :class="(errorPin) ? 'error points' : 'points'">
                 <div class="point" v-for="value of values" :key="value">
                     <span :class="(value == null) ? 'bull' : ''">{{ value }}</span>
                 </div>
