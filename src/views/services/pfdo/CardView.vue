@@ -123,7 +123,7 @@
                 </div>
                 <div v-html="card.descript" class="descript"></div>
             </div>
-            <h2 v-if="card.address">Адрес: {{ card.address.address }}</h2>
+            <h2 v-if="card.address"><b>Адрес:</b> {{ card.address.address }}</h2>
             <div class="map" id="map"></div>
         </div>
     </div>
