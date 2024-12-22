@@ -7,6 +7,11 @@ export default {
   components: {
     HeaderComp,
     FooterNavComp,
+  },
+  mounted(){
+    if(this.Telegram.WebApp.platform != 'tdesktop' && this.Telegram.WebApp.platform != 'web'){
+      this.$store.state.pinAuthorized = true,
+    }
   }
 }
 </script>
