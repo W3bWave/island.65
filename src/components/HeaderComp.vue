@@ -1,9 +1,24 @@
 <template>
-    <header id="header">
+    <header id="header" v-if="show">
         <span id="title-app" class="roboto-bold">Острова.65 {{ $route.name }}</span>
     </header>
 </template>
-
+<script>
+    export default {
+        name : "HeaderComp",
+        data()
+            {
+                return {
+                    show : true
+                }
+            },
+        mounted(){
+            if(window.Telegram.WebApp.platform == 'tdesktop' || window.Telegram.WebApp.platform == 'web'){
+                this.show = false;
+            }
+        }
+    }
+</script>
 <style scoped>
     #header{
         position: sticky;
