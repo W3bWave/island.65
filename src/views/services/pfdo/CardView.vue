@@ -116,6 +116,7 @@
                     </div>
                 </div>
             </div>
+            <a class="sign_button" target="_blank" :href="`https://65.pfdo.ru/app/groups/${id}`">Записаться</a>
             <div class="descript">
                 <div class="header">
                     <h2>Описание программы</h2>
@@ -215,5 +216,14 @@
 #map{
     width: 100%;
     height: 200px
+}
+
+.sign_button{
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 1.2rem;
 }
 </style>
